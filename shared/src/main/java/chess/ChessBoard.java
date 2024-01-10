@@ -7,9 +7,16 @@ package chess;
  * signature of the existing methods.
  */
 public class ChessBoard {
+    private int boardLength;
+    private int boardWidth;
+    private int[][] space;
 
     public ChessBoard() {
-        
+        boardLength = 8;
+        boardWidth = 8;
+
+        space = new int[boardWidth][boardLength];
+
     }
 
     /**
