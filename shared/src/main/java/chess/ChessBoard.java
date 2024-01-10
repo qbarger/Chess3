@@ -7,15 +7,10 @@ package chess;
  * signature of the existing methods.
  */
 public class ChessBoard {
-    private int boardLength;
-    private int boardWidth;
-    private int[][] space;
+    private ChessPiece[][] board;
 
     public ChessBoard() {
-        boardLength = 8;
-        boardWidth = 8;
-
-        space = new int[boardWidth][boardLength];
+        board = new ChessPiece[8][8];
 
     }
 
@@ -26,7 +21,7 @@ public class ChessBoard {
      * @param piece    the piece to add
      */
     public void addPiece(ChessPosition position, ChessPiece piece) {
-        throw new RuntimeException("Not implemented");
+        this.board[position.getColumn()][position.getRow()] = piece;
     }
 
     /**
