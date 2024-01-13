@@ -10,12 +10,12 @@ public class ChessBoard {
 
     private int rowLength;
     private int columnLength;
-    private ChessPiece.PieceType[][] board;
+    private ChessPiece[][] board;
 
     public ChessBoard() {
         this.rowLength = 8;
         this.columnLength = 8;
-        this.board = new ChessPiece.PieceType[rowLength][columnLength];
+        this.board = new ChessPiece[rowLength][columnLength];
     }
 
     /**
@@ -25,7 +25,7 @@ public class ChessBoard {
      * @param piece    the piece to add
      */
     public void addPiece(ChessPosition position, ChessPiece piece) {
-        this.board[position.getRow()][position.getColumn()] = piece.getPieceType();
+        this.board[position.getRow()][position.getColumn()] = piece;
     }
 
     /**
@@ -36,7 +36,7 @@ public class ChessBoard {
      * position
      */
     public ChessPiece getPiece(ChessPosition position) {
-        ChessPiece.PieceType piece = this.board[position.getRow()][position.getColumn()];
+        ChessPiece piece = this.board[position.getRow()][position.getColumn()];
         return piece;
     }
 
