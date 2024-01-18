@@ -17,7 +17,7 @@ public class ChessPiece {
     public ChessPiece(ChessGame.TeamColor pieceColor, ChessPiece.PieceType type) {
         this.pieceColor = pieceColor;
         this.pieceType = type;
-        piece = new PieceMove(osition, this.pieceType);
+        piece = new PieceMove(pieceType);
     }
 
     /**
@@ -54,8 +54,9 @@ public class ChessPiece {
      * @return Collection of valid moves
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
+        ArrayList<ChessMove> setOfMoves = new ArrayList<>();
         if (pieceType == PieceType.BISHOP){
-            ArrayList<ChessMove> setOfMoves = piece.BishopMoveCalculator(myPosition);
+            setOfMoves = piece.BishopMoveCalculator(myPosition);
         }
         return setOfMoves;
     }

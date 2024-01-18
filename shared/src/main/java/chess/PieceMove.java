@@ -7,8 +7,7 @@ public class PieceMove {
   private ChessPosition position;
   private ChessPiece.PieceType pieceType;
 
-  public PieceMove(ChessPosition position, ChessPiece.PieceType pieceType){
-    this.position = position;
+  public PieceMove(ChessPiece.PieceType pieceType){
     this.pieceType = pieceType;
   }
 
