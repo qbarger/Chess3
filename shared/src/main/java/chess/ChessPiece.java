@@ -56,7 +56,7 @@ public class ChessPiece {
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
         ArrayList<ChessMove> setOfMoves = new ArrayList<>();
         if (pieceType == PieceType.BISHOP){
-            setOfMoves = piece.BishopMoveCalculator(myPosition);
+            setOfMoves = piece.BishopMoveCalculator(myPosition, board);
         }
         return setOfMoves;
     }
